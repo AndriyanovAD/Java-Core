@@ -4,6 +4,13 @@ public class Main {
 
     public static void main(String[] args) {
 
+        String[] array = new String[2];
+        array[0] = "1";
+        array[1] = "2";
+        System.out.println("Массив содержит: [0]= " + array[0] + " [1]= " + array[1]);
+        changeElementsOfArray(array, 0, 1);
+        System.out.println("Массив содержит: [0]= " + array[0] + " [1]= " + array[1]);
+
         Box boxOfApples1 = new Box();
         boxOfApples1.addFruit(new Apple());
         boxOfApples1.addFruit(new Apple());
@@ -36,6 +43,17 @@ public class Main {
 
     }
 
-
+    public static void changeElementsOfArray(String[] array, int index1, int index2){
+        if (array.length >= index1 & array.length >= index2) {
+            String a;
+            String b;
+            a = array[index1];
+            b = array[index2];
+            array[index1] = b;
+            array[index2] = a;
+        } else {
+            System.out.println("Размер данного массива меньше чем подаваемые индексы");
+        }
+    }
 
 }
