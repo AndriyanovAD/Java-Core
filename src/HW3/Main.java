@@ -10,6 +10,7 @@ public class Main {
         System.out.println("Массив содержит: [0]= " + array[0] + " [1]= " + array[1]);
         changeElementsOfArray(array, 0, 1);
         System.out.println("Массив содержит: [0]= " + array[0] + " [1]= " + array[1]);
+        changeElementsOfArray(array, -1, 1);
 
         Box boxOfApples1 = new Box();
         boxOfApples1.addFruit(new Apple());
@@ -44,7 +45,7 @@ public class Main {
     }
 
     public static void changeElementsOfArray(String[] array, int index1, int index2){
-        if (array.length >= index1 & array.length >= index2) {
+        if ( index1 >= 0 & index2 >= 0 & array.length >= index1 & array.length >= index2) {
             String a;
             String b;
             a = array[index1];
@@ -52,7 +53,7 @@ public class Main {
             array[index1] = b;
             array[index2] = a;
         } else {
-            System.out.println("Размер данного массива меньше чем подаваемые индексы");
+            System.out.println("Некорректные индексы или размер массива");
         }
     }
 
