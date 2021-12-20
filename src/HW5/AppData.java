@@ -57,7 +57,6 @@ public class AppData {
                     this.values[i][j] = Integer.parseInt(tmp[j]);
                 }
             }
-
         } catch (IOException e){
             e.printStackTrace();
         }
